@@ -1,0 +1,5 @@
+<%= turbo_stream.remove @room %>
+<%= turbo_stream.update "flash-notice" do %>
+  <p style="color: green">Room was successfully deleted.</p>
+<% end %>
+<%= turbo_stream.replace "actions", partial: "form", locals: {room: Room.new(name: "Room #{Room.count + 1}")} %>

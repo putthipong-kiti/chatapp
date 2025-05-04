@@ -1,0 +1,8 @@
+<div id="<%= dom_id room %>" class="room">
+  <%= link_to messages_path(room_id: room.id), data: { turbo_frame: 'room-messages' } do %>
+    <div class='room'>
+      <%= room.name %>
+    </div>
+  <% end %>
+  <%= button_to 'Delete Room', room, method: :delete, form: {data: { confirm: 'Are you sure?' }} %>
+</div>
