@@ -16,7 +16,7 @@ describe "User can delete a room" do
     visit rooms_path
   end
 
-  def user_clicks_delete_room
+  def user_deletes_a_room
     click_button 'Delete Room'
   end
 
